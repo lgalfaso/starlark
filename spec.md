@@ -996,8 +996,8 @@ Dictionaries provide constant-time operations to insert an element, to
 look up the value for a key, or to remove an element.  Dictionaries
 are implemented using hash tables, so keys must be hashable.  Hashable
 values include `None`, Booleans, numbers, strings, and bytes, and tuples
-composed from hashable values.  Most mutable values, such as lists,
-dictionaries, and sets, are not hashable, unless they are frozen.
+composed from hashable values.  All mutable values, such as lists,
+dictionaries, and sets are not hashable.
 Attempting to use a non-hashable value as a key in a dictionary
 results in a dynamic error.
 
@@ -1746,7 +1746,7 @@ Values of the types `None`, `bool`, `int`, `float`, `str`, and `bytes`,
 which are all immutable, are hashable.
 
 Values of mutable types such as `list` and `dict` are not
-hashable, unless they have become immutable due to _freezing_.
+hashable.
 
 A `tuple` value is hashable only if all its elements are hashable.
 Thus `("localhost", 80)` is hashable but `([127, 0, 0, 1], 80)` is not.
