@@ -2805,8 +2805,6 @@ a, b = 2, 3
 (x, y) = f()
 [zero, one, two] = range(3)
 [] = ()
-
-[(a, b), (c, d)] = ("ab", "cd")
 ```
 
 The same process for assigning a value to a target expression is used
