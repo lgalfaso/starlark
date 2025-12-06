@@ -3461,7 +3461,13 @@ With no argument, `list()` returns a new empty list.
 
 ### max
 
-`max(x)` returns the greatest element in the collection `x`.
+`max(x)` returns the greatest element of the given arguments.
+
+Whenever called with one positional argument is provided, it must
+be an iterable and the largest item in the iterable is returned.
+
+Whenever called with two or more positional arguments, the
+largest of the positional arguments is returned.
 
 It is an error if any element does not support ordered comparison,
 or if the collection is empty.
@@ -3478,7 +3484,13 @@ max("two", "three", "four", key=len)            # "three", the longest
 
 ### min
 
-`min(x)` returns the least element in the collection `x`.
+`min(x)` returns the least element of the given arguments.
+
+Whenever called with one positional argument is provided, it must
+be an iterable and the smallest item in the iterable is returned.
+
+Whenever called with two or more positional arguments, the
+smallest of the positional arguments is returned.
 
 It is an error if any element does not support ordered comparison,
 or if the collection is empty.
