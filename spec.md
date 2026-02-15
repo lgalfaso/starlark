@@ -3461,16 +3461,17 @@ With no argument, `list()` returns a new empty list.
 
 ### max
 
-`max(x)` returns the greatest element of the given arguments.
+`max(x)` returns the greatest element.
 
-Whenever called with one positional argument is provided, it must
-be an iterable and the largest item in the iterable is returned.
+When called with one positional argument, `max(x, key=None)` returns the greatest
+element in the iterable value x. It is an error if x is empty, not iterable, or if
+any of its elements do not support ordered comparison with others.
 
-Whenever called with two or more positional arguments, the
-largest of the positional arguments is returned.
+When called with 2 or more positional arguments, `max(key=None, *args)` returns
+the greatest of its positional args. It is an error if any of the positional
+arguments do not support ordered comparison with others.
 
-It is an error if any element does not support ordered comparison,
-or if the collection is empty.
+It is an error to call max with no positional arguments.
 
 The optional named parameter `key` specifies a function to be applied
 to each element, whose result is used for the comparison in place of
@@ -3484,16 +3485,17 @@ max("two", "three", "four", key=len)            # "three", the longest
 
 ### min
 
-`min(x)` returns the least element of the given arguments.
+`min(x)` returns the smallest element.
 
-Whenever called with one positional argument is provided, it must
-be an iterable and the smallest item in the iterable is returned.
+When called with one positional argument, `min(x, key=None)` returns the smallest
+element in the iterable value x. It is an error if x is empty, not iterable, or if
+any of its elements do not support ordered comparison with others.
 
-Whenever called with two or more positional arguments, the
-smallest of the positional arguments is returned.
+When called with 2 or more positional arguments, `min(key=None, *args)` returns
+the smallest of its positional args. It is an error if any of the positional
+arguments do not support ordered comparison with others.
 
-It is an error if any element does not support ordered comparison,
-or if the collection is empty.
+It is an error to call min with no positional arguments.
 
 The optional named parameter `key` specifies a function to be applied
 to each element, whose result is used for the comparison in place of
